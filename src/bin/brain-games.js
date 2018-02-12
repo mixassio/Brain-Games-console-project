@@ -1,3 +1,3 @@
-#!/usr/local/bin/node
-import {userName} from '..'
-console.log('Hi ' + userName + '!');
+#!/usr/bin/env node
+import {answer} from '..';
+answer()
