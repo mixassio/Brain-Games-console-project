@@ -2,4 +2,3 @@
 import evenNumber from '..';
 
 evenNumber();
-
