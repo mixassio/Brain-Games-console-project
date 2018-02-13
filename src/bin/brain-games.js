@@ -1,3 +1,5 @@
 #!/usr/bin/env node
-import {answer} from '..';
-answer()
+import { answer } from '..';
+
+answer();
+
