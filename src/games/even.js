@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
 import hello from './hello';
+import bubleSort from './bubleSort';
 
 const param = {
   hello:
@@ -43,6 +44,27 @@ const param = {
             console.log(randOp);
             console.log(answ);
             return [qwe, answ.toString()];
+          },
+        },
+  balance:
+        {
+          text: 'Balance the given number.',
+          qwestionAnswer: () => {
+            const qwe = Math.floor(Math.random() * 99001) + 1000;
+            const myList = (`${qwe}`).split('').map(a => Number(a));
+            const maxAr = array => Math.max(...array);
+            const minAr = array => Math.min(...array);
+            let maxEl = maxAr(myList);
+            let minEl = minAr(myList);
+            while (maxEl - minEl > 1) {
+              myList[myList.indexOf(maxEl)] -= 1;
+              myList[myList.indexOf(minEl)] += 1;
+              maxEl = maxAr(myList);
+              minEl = minAr(myList);
+            }
+            const sortList = bubleSort(myList);
+            console.log(sortList.join(''));
+            return [qwe, sortList.join('')];
           },
         },
   gcd:
