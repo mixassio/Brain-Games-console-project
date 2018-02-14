@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import evenNumber from '..';
+import { hello } from '..';
 
-evenNumber();
-
+hello();
