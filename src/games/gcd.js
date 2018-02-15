@@ -1,4 +1,4 @@
-import { COUNT_STEPS, games } from '../index';
+import { games } from '../index';
 
 const text = 'Find the greatest common divisor of given numbers.';
 const qwestionAnswer = () => {
@@ -16,17 +16,11 @@ const qwestionAnswer = () => {
     up = les;
     les = r;
   }
-  console.log(les);
   return [qwe, les.toString()];
 };
 
 const gcd = () => {
-  const qweArList = [];
-  for (let i = 0; i < COUNT_STEPS; i += 1) {
-    qweArList.push(qwestionAnswer());
-  }
-  games(text, qweArList);
+  games(text, qwestionAnswer);
 };
 
 export default gcd;
-

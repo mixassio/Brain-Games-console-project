@@ -1,4 +1,4 @@
-import { COUNT_STEPS, games } from '../index';
+import { games } from '../index';
 
 const text = 'What is the result of the expression?';
 const qwestionAnswer = () => {
@@ -25,11 +25,7 @@ const qwestionAnswer = () => {
 };
 
 const calc = () => {
-  const qweArList = [];
-  for (let i = 0; i < COUNT_STEPS; i += 1) {
-    qweArList.push(qwestionAnswer());
-  }
-  games(text, qweArList);
+  games(text, qwestionAnswer);
 };
 
 export default calc;

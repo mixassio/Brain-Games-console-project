@@ -1,5 +1,5 @@
 import bubleSort from './bubleSort';
-import { COUNT_STEPS, games } from '../index';
+import { games } from '../index';
 
 const text = 'Balance the given number.';
 const qwestionAnswer = () => {
@@ -20,11 +20,7 @@ const qwestionAnswer = () => {
 };
 
 const balance = () => {
-  const qweArList = [];
-  for (let i = 0; i < COUNT_STEPS; i += 1) {
-    qweArList.push(qwestionAnswer());
-  }
-  games(text, qweArList);
+  games(text, qwestionAnswer);
 };
 
 export default balance;

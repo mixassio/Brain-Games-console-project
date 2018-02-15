@@ -8,7 +8,7 @@ const games = (text, qwestionAnswer) => {
   console.log(text);
   let answer;
   for (let i = 0; i < COUNT_STEPS; i += 1) {
-    const [qwestion, trueAnswer] = qwestionAnswer[i];
+    const [qwestion, trueAnswer] = qwestionAnswer();
     console.log('trueAnswer: ', trueAnswer);
     console.log('Question: ', qwestion);
     answer = readlineSync.question('Your answer: ');
@@ -27,4 +27,4 @@ const games = (text, qwestionAnswer) => {
   }
 };
 
-export { hello, games, COUNT_STEPS };
+export { hello, games };
