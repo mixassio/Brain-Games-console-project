@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import { games } from '..';
+import gcd from '../games/gcd';
 
-games('gcd');
+gcd();
