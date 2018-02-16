@@ -1,10 +1,11 @@
 import { runGames } from '../index';
 import nodEvcklid from './func/nodEvklid';
+import randomNum from './func/randomNum';
 
 const text = 'Find the greatest common divisor of given numbers.';
 const questionAnswer = () => {
-  const num1 = Math.floor(Math.random() * 1000);
-  const num2 = Math.floor(Math.random() * 1000);
+  const num1 = randomNum(1, 1000);
+  const num2 = randomNum(1, 1000);
   const que = `${num1} ${num2}`;
   const answ = nodEvcklid(num1, num2);
   return [que, answ.toString()];

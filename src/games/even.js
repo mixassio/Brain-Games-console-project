@@ -1,8 +1,9 @@
 import { runGames } from '../index';
+import randomNum from './func/randomNum';
 
 const text = 'Answer "yes" if number even otherwise answer "no".';
 const questionAnswer = () => {
-  const que = Math.floor(Math.random() * 10);
+  const que = randomNum(1, 100);
   const answ = que % 2 === 0 ? 'yes' : 'no';
   return [que, answ];
 };

@@ -1,9 +1,10 @@
 import bubleSort from './func/bubleSort';
 import { runGames } from '../index';
+import randomNum from './func/randomNum';
 
 const text = 'Balance the given number.';
 const questionAnswer = () => {
-  const que = Math.floor(Math.random() * 99001) + 1000;
+  const que = randomNum(1000, 100000);
   const myList = (`${que}`).split('').map(a => Number(a));
   const maxAr = array => Math.max(...array);
   const minAr = array => Math.min(...array);
