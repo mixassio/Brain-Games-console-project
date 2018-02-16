@@ -19,7 +19,7 @@ const questionAnswer = () => {
       answ = num1 * num2;
       break;
     default:
-      console.log('sorry');
+      answ = 0;
   }
   return [que, answ.toString()];
 };
