@@ -3,21 +3,19 @@ import hello from './games/hello';
 
 const COUNT_STEPS = 3;
 
-const games = (text, qwestionAnswer) => {
+const runGames = (text, questionAnswer) => {
   const userName = hello();
   console.log(text);
   let answer;
-  for (let i = 0; i < COUNT_STEPS; i += 1) {
-    const [qwestion, trueAnswer] = qwestionAnswer();
+  for (let i = 1; i <= COUNT_STEPS; i += 1) {
+    const [question, trueAnswer] = questionAnswer();
     console.log('trueAnswer: ', trueAnswer);
-    console.log('Question: ', qwestion);
+    console.log('Question: ', question);
     answer = readlineSync.question('Your answer: ');
     if (answer === trueAnswer) {
-      if (i === COUNT_STEPS - 1) {
-        console.log('Correct!');
+      console.log('Correct!');
+      if (i === COUNT_STEPS) {
         console.log(`Congratulations, ${userName}!`);
-      } else {
-        console.log('Correct!');
       }
     } else {
       console.log(`${answer} is wrong answer ;(. Correct answer was ${trueAnswer}`);
@@ -27,4 +25,4 @@ const games = (text, qwestionAnswer) => {
   }
 };
 
-export { hello, games };
+export { hello, runGames };

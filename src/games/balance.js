@@ -1,10 +1,10 @@
-import bubleSort from './bubleSort';
-import { games } from '../index';
+import bubleSort from './func/bubleSort';
+import { runGames } from '../index';
 
 const text = 'Balance the given number.';
-const qwestionAnswer = () => {
-  const qwe = Math.floor(Math.random() * 99001) + 1000;
-  const myList = (`${qwe}`).split('').map(a => Number(a));
+const questionAnswer = () => {
+  const que = Math.floor(Math.random() * 99001) + 1000;
+  const myList = (`${que}`).split('').map(a => Number(a));
   const maxAr = array => Math.max(...array);
   const minAr = array => Math.min(...array);
   let maxEl = maxAr(myList);
@@ -16,11 +16,11 @@ const qwestionAnswer = () => {
     minEl = minAr(myList);
   }
   const sortList = bubleSort(myList);
-  return [qwe, sortList.join('')];
+  return [que, sortList.join('')];
 };
 
 const balance = () => {
-  games(text, qwestionAnswer);
+  runGames(text, questionAnswer);
 };
 
 export default balance;

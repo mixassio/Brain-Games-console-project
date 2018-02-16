@@ -1,13 +1,13 @@
-import { games } from '../index';
+import { runGames } from '../index';
 
 const text = 'Answer "yes" if number even otherwise answer "no".';
-const qwestionAnswer = () => {
-  const qwe = Math.floor(Math.random() * 10);
-  const answ = qwe % 2 === 0 ? 'yes' : 'no';
-  return [qwe, answ];
+const questionAnswer = () => {
+  const que = Math.floor(Math.random() * 10);
+  const answ = que % 2 === 0 ? 'yes' : 'no';
+  return [que, answ];
 };
 const even = () => {
-  games(text, qwestionAnswer);
+  runGames(text, questionAnswer);
 };
 
 export default even;

@@ -1,26 +1,17 @@
-import { games } from '../index';
+import { runGames } from '../index';
+import nodEvcklid from './func/nodEvklid';
 
 const text = 'Find the greatest common divisor of given numbers.';
-const qwestionAnswer = () => {
+const questionAnswer = () => {
   const num1 = Math.floor(Math.random() * 1000);
   const num2 = Math.floor(Math.random() * 1000);
-  const qwe = `${num1} ${num2}`;
-  let up = Math.max(num1, num2);
-  let les = Math.min(num1, num2);
-  let r = 1;
-  while (r !== 0) {
-    r = up % les;
-    if (r === 0) {
-      break;
-    }
-    up = les;
-    les = r;
-  }
-  return [qwe, les.toString()];
+  const que = `${num1} ${num2}`;
+  const answ = nodEvcklid(num1, num2);
+  return [que, answ.toString()];
 };
 
 const gcd = () => {
-  games(text, qwestionAnswer);
+  runGames(text, questionAnswer);
 };
 
 export default gcd;
