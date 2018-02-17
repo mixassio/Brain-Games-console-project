@@ -1,6 +1,6 @@
-import bubleSort from './func/bubleSort';
+import bubleSort from './my_func/bubleSort';
 import { runGames } from '../index';
-import randomNum from './func/randomNum';
+import randomNum from './my_func/randomNum';
 
 const text = 'Balance the given number.';
 const questionAnswer = () => {

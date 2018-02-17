@@ -1,15 +1,15 @@
 import { runGames } from '../index';
 import randomNum from './my_func/randomNum';
+import sundaram from './my_func/sundaram';
 
-const text = 'Answer "yes" if number even otherwise answer "no".';
+const text = 'Is this number prime?';
 const questionAnswer = () => {
   const que = randomNum(1, 100);
-  const answ = que % 2 === 0 ? 'yes' : 'no';
-  return [que, answ];
+  const answ = sundaram(que);
+  return [que, answ.toString()];
 };
-const even = () => {
+const prime = () => {
   runGames(text, questionAnswer);
 };
 
-export default even;
-
+export default prime;

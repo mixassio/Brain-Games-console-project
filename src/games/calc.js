@@ -1,5 +1,5 @@
 import { runGames } from '../index';
-import randomNum from './func/randomNum';
+import randomNum from './my_func/randomNum';
 
 const text = 'What is the result of the expression?';
 const questionAnswer = () => {
