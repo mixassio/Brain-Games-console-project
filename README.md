@@ -1,4 +1,4 @@
-# project-lvl1-s200
+# Brain-Games-console-project
 
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/bb544b5b7c8b985ea501/maintainability)](https://codeclimate.com/github/mixassio/project-lvl1-s200/maintainability)
@@ -16,6 +16,6 @@ $ brain-balance
 $ brain-games
 $ brain-calc
 $ brain-gcd
-brain-progression
+$ brain-progression
 ```
 Это простенький учебный проект на консольные игры
